@@ -1,0 +1,49 @@
+
+#marco1 {
+    width: 60%;
+    height: 50%;
+    
+    float: right;
+
+}
+
+#fondo {
+
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 360px;
+    height: 650px;
+    float: left;
+    
+
+
+}
+
+#marco2 {
+    width: 360px;
+    height: 650px;
+    float: left;
+    
+
+}
+
+#title {
+    width: 360px;
+    height: 650px;
+
+    position: absolute;
+}
+
+.marco {
+    overflow: auto;}
+
+
+
+#fondo:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);}
+
+#bar {
+    text-align: center;
+    background-color: blue;
+}
