@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id = "matgroup">
+        <input type="text" id = "matricula"></input>
+        <button onclick= " document.getElementById('result').innerHTML = start(Coche.verificar_matricula(document.getElementById('matricula'))); ">Introducir matricula</button>
+    </div>
+    <div id = "gasgroup">
+        <input type="number" id = "precio"></input>
+        <button onclick= " document.getElementById('result').innerHTML = start2(document.getElementById('precio').value); ">Introducir precio</button>
+    </div>
+    <script>document.getElementById("gasgroup").style.display = "none";</script>
+    <div id = "ingroup">
+
+        <input type="number" id = "distancia">Distancia</input>
+        
+        
+        <button onclick= " document.getElementById('result').innerHTML = coche.viajar(document.getElementById('distancia').value);">Viajar</button>
+
+        <input type="number" id = "repostar"></input>
+        
+        
+        <button onclick= " document.getElementById('result').innerHTML = coche.repostar(document.getElementById('repostar').value, gasolinera.get_precio());">Repostar</button>
+    </br>
+    <button onclick= " document.getElementById('result').innerHTML = coche.get_historico();">Mostrar historico</button>
+    <button onclick= " document.getElementById('result').innerHTML = gasolinera.get_historico();">Mostrar historico Gas</button>
+    </br>
+    <p id="combustible">Gasolina: 50</p>
+    <p id="dinero">Dinero: 100</p>
+    </div>
+
+    <script>document.getElementById("ingroup").style.display = "none";</script>
+    <p id="result"></p>
+    <script src="coche.js"></script>
+</body>
+</html>
