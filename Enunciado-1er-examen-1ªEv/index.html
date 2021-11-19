@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="css/style-movile.css" rel="stylesheet" media="only screen and (max-width: 700px)"/>
+<link href="css/style.css" rel="stylesheet" media="only screen and (min-width: 700px)"/>
+
+</head>
+<body onload="myFunction()" style="margin:10;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  
+
+
+    <div class = "space">
+
+
+    </div>
+
+
+    <span class="contacts">
+        <span class="contact" id="contact-1"  onmouseover="mostrarConversacion('contact-1')">
+            <img src="img/profile.png" class="profile-photo"/>
+            <h1>Pilar Sanchez</h1>
+            <p>descripcion</p>
+        </span>
+        </br>
+
+        <span class="contact" id="contact-2" onmouseover="mostrarConversacion('contact-2')">
+            <img src="img/profile.png" class="profile-photo"/>
+            <h1>Gustavo Lopez</h1>
+            <p>descripcion</p>
+        </span>
+
+
+        <span class="contact" id="contact-3" onmouseover="mostrarConversacion('contact-3')">
+            <img src="img/profile.png" class="profile-photo"/>
+            <h1>Jesus Perez</h1>
+            <p>descripcion</p>
+        </span>
+    </span>
+
+    <span class="columnn">
+        
+        <span class="conversation hidden" id="conversation-contact-1" name="conversation">
+            <span>
+                hola soy pilar
+            </span>
+        </span>
+
+        <span class="conversation hidden" id="conversation-contact-2" name="conversation">
+            hola soy gustavo
+        </span>
+
+        <span class="conversation hidden" id="conversation-contact-3" name="conversation">
+            hola soy jesus
+        </span>
+    </span>
+
+
+
+    </span>
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 100);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+function mostrarConversacion(id){
+			var items = document.getElementsByName('conversation');
+			for (var i = 0; i < items.length; i++) {
+				items[i].classList.add('hidden');
+			}
+			document.getElementById('conversation-'+id).classList.remove('hidden');
+		}
+</script>
+
+</body>
+</html>
